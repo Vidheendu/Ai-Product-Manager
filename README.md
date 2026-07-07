@@ -233,12 +233,3 @@ AI-Product-Manager-Copilot/
 
 ---
 
-# 🤝 Contributing
-
-Contributions, suggestions, and improvements are welcome. Feel free to fork the repository, create a feature branch, and submit a pull request.
-
----
-
-# 📄 License
-
-This project is licensed under the MIT License.
