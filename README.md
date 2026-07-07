@@ -1,111 +1,28 @@
 # 🚀 AI Product Manager Copilot
 
-AI Product Manager Copilot is a web-based platform that helps product managers organize and manage customer feedback from multiple sources. The system provides an end-to-end workflow for collecting, validating, cleaning, categorizing, and storing product feedback, making it easier to understand user needs and support data-driven product decisions.
+AI Product Manager Copilot is a web-based platform that helps Product Managers collect, organize, process, and manage customer feedback from multiple sources. The application provides a structured workflow for importing feedback, validating data, preprocessing text, categorizing customer feedback, and presenting meaningful insights through an interactive dashboard.
+
+The project is designed with a modular and scalable architecture, making it easy to extend with advanced analytics and intelligent features in the future.
 
 ---
 
 ## 📖 Overview
 
-The application enables product teams to collect feedback from different sources and process it through a structured pipeline before making it available for visualization and future analysis.
+Managing customer feedback from multiple channels can be challenging and time-consuming. This project provides a centralized platform where product teams can upload, organize, and process customer feedback efficiently.
 
-### Key Features
-
-- Upload customer feedback in multiple formats
-- Validate uploaded datasets
-- Clean and preprocess feedback
-- Categorize customer feedback
-- Store raw and processed data
-- Visualize feedback through a dashboard
-- Scalable architecture for future enhancements
+The application follows a complete data pipeline that starts with file upload and ends with a structured dashboard displaying processed information.
 
 ---
 
-# 🏗️ System Architecture
+# ✨ Features
 
-```
-Product Manager / User
-        │
-        ▼
-React.js + Tailwind CSS
-        │
-        ▼
-HTTP REST API
-        │
-        ▼
-FastAPI Backend
-        │
-        ▼
-Authentication
-Project Management
-File Upload
-        │
-        ▼
-Data Validation
-        │
-        ▼
-Data Cleaning & Preprocessing
-        │
-        ▼
-Feedback Categorization
-        │
-        ▼
-MongoDB Atlas
-        │
-        ▼
-Dashboard & Statistics
-```
+### 👤 User Management
 
----
+- Secure User Authentication
+- Project Creation & Management
+- Protected Dashboard Access
 
-# 🔄 Workflow
-
-```
-User
- │
- ▼
-Create Project
- │
- ▼
-Upload Feedback Files
-(CSV • Excel • JSON • PDF)
- │
- ▼
-Validate Uploaded Data
- │
- ▼
-Clean & Preprocess Data
- │
- ▼
-Categorize Feedback
- │
- ▼
-Store Data
- │
- ▼
-Dashboard & Insights
-```
-
----
-
-# ⚙️ Core Modules
-
-## 🔐 Authentication
-
-- Secure Login
-- User Authentication
-- Protected Routes
-
----
-
-## 📁 Project Management
-
-- Create Projects
-- Manage Project Information
-- Organize Uploaded Data
-
----
-
-## 📤 File Upload
+### 📁 File Upload
 
 Supports multiple file formats:
 
@@ -114,23 +31,19 @@ Supports multiple file formats:
 - JSON
 - PDF
 
----
+### ✅ Data Validation
 
-## ✅ Data Validation
+Before processing, uploaded files are validated through:
 
-Before processing, uploaded files are validated by checking:
+- File Format Validation
+- Empty File Detection
+- Duplicate Upload Detection
+- Schema Validation
+- Data Integrity Check
 
-- File format
-- Empty files
-- Duplicate uploads
-- Schema validation
-- Data integrity
+### 🧹 Data Cleaning & Preprocessing
 
----
-
-## 🧹 Data Cleaning & Preprocessing
-
-The uploaded data is processed through:
+The uploaded data is processed using:
 
 - Duplicate Removal
 - Missing Value Handling
@@ -140,9 +53,7 @@ The uploaded data is processed through:
 - Stop-word Removal
 - Lemmatization
 
----
-
-## 📂 Feedback Categorization
+### 📂 Feedback Categorization
 
 Feedback is organized into categories such as:
 
@@ -154,29 +65,79 @@ Feedback is organized into categories such as:
 - 🎧 Support
 - 📌 Others
 
----
+### 📊 Dashboard
 
-## 🗄️ Database
-
-MongoDB Atlas stores:
-
-- Users
-- Projects
-- Uploaded Files
-- Raw Feedback
-- Processed Feedback
-- Categories
-
----
-
-## 📊 Dashboard
-
-The dashboard provides:
+Displays:
 
 - Upload Status
 - File Summary
-- Category Distribution
 - Dataset Overview
+- Category Distribution
+- Project Statistics
+
+---
+
+# 🏗️ System Architecture
+
+```
+                     Product Manager / User
+                               │
+                               ▼
+               React.js + Tailwind CSS Frontend
+                               │
+                         HTTP REST API
+                               │
+                               ▼
+                  FastAPI Backend (Python)
+                               │
+        ┌──────────────┬──────────────┬──────────────┐
+        │              │              │
+ Authentication   Project Mgmt     File Upload
+        │              │              │
+        └──────────────┴──────────────┘
+                       │
+                       ▼
+               Data Validation Layer
+                       │
+                       ▼
+         Data Cleaning & Preprocessing
+                       │
+                       ▼
+         Feedback Categorization Engine
+                       │
+                       ▼
+               MongoDB Atlas Database
+                       │
+                       ▼
+              Dashboard & Statistics
+```
+
+---
+
+# 🔄 Data Processing Pipeline
+
+```
+Customer Feedback
+        │
+        ▼
+Upload Files
+(CSV | Excel | JSON | PDF)
+        │
+        ▼
+Validate Uploaded Data
+        │
+        ▼
+Clean & Preprocess Data
+        │
+        ▼
+Categorize Feedback
+        │
+        ▼
+Store Raw & Processed Data
+        │
+        ▼
+Dashboard & Statistics
+```
 
 ---
 
@@ -184,26 +145,30 @@ The dashboard provides:
 
 | Layer | Technology |
 |--------|------------|
-| Frontend | React.js + Tailwind CSS |
-| Backend | FastAPI (Python) |
-| Database | MongoDB Atlas |
-| Authentication | JWT / Clerk |
-| Data Processing | Pandas |
-| NLP | NLTK, spaCy |
-| Version Control | Git & GitHub |
+| **Frontend** | React.js, Tailwind CSS |
+| **Backend** | FastAPI (Python) |
+| **Database** | MongoDB Atlas |
+| **Authentication** | JWT |
+| **Data Processing** | Pandas, NumPy |
+| **Text Processing** | NLTK, spaCy |
+| **API Communication** | REST API |
+| **Version Control** | Git & GitHub |
+| **Deployment** | Vercel, Render/Railway |
 
 ---
 
 # 📁 Project Structure
 
-```
+```text
 AI-Product-Manager-Copilot/
 │
 ├── frontend/
 │   ├── components/
 │   ├── pages/
 │   ├── services/
-│   └── assets/
+│   ├── hooks/
+│   ├── assets/
+│   └── App.jsx
 │
 ├── backend/
 │   ├── api/
@@ -211,12 +176,180 @@ AI-Product-Manager-Copilot/
 │   ├── preprocessing/
 │   ├── validation/
 │   ├── uploads/
-│   └── database/
+│   ├── models/
+│   ├── database/
+│   └── main.py
 │
 ├── docs/
 ├── datasets/
-└── README.md
+├── README.md
+└── requirements.txt
 ```
+
+---
+
+# ⚙️ Installation & Setup
+
+## 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/AI-Product-Manager-Copilot.git
+
+cd AI-Product-Manager-Copilot
+```
+
+---
+
+## 2️⃣ Frontend Setup
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+Frontend will run at:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 3️⃣ Backend Setup
+
+Create a virtual environment:
+
+```bash
+python -m venv venv
+```
+
+Activate it:
+
+### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+source venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the backend:
+
+```bash
+uvicorn main:app --reload
+```
+
+Backend will run at:
+
+```
+http://localhost:8000
+```
+
+---
+
+## 4️⃣ Configure Environment Variables
+
+Create a `.env` file inside the backend folder.
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+
+DATABASE_NAME=ai_product_manager
+
+JWT_SECRET=your_secret_key
+```
+
+---
+
+## 5️⃣ Connect MongoDB Atlas
+
+- Create a MongoDB Atlas cluster
+- Create a database
+- Update the connection string in `.env`
+
+---
+
+# 🚀 Deployment
+
+### Frontend
+
+Deploy using **Vercel**
+
+```bash
+npm run build
+```
+
+---
+
+### Backend
+
+Deploy using:
+
+- Render
+- Railway
+
+Run using:
+
+```bash
+uvicorn main:app
+```
+
+---
+
+### Database
+
+Deploy using:
+
+- MongoDB Atlas
+
+---
+
+# 📋 Requirements
+
+## Frontend
+
+- React.js
+- Tailwind CSS
+- React Router
+- Axios
+
+## Backend
+
+- Python 3.10+
+- FastAPI
+- Uvicorn
+- Pydantic
+- Python-dotenv
+
+## Data Processing
+
+- Pandas
+- NumPy
+- NLTK
+- spaCy
+
+## Database
+
+- MongoDB Atlas
+
+## Development Tools
+
+- Git
+- GitHub
+- VS Code
 
 ---
 
@@ -225,11 +358,60 @@ AI-Product-Manager-Copilot/
 - Sentiment Analysis
 - Feedback Summarization
 - Keyword Extraction
+- Named Entity Recognition
 - Feature Prioritization
 - Recommendation Engine
 - Product Analytics Dashboard
-- Roadmap Generation
 - Executive Reports
+- Product Roadmap Generation
+- Jira Integration
+- GitHub Issues Integration
 
 ---
 
+# 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a feature branch
+
+```bash
+git checkout -b feature/feature-name
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Add feature"
+```
+
+4. Push to GitHub
+
+```bash
+git push origin feature/feature-name
+```
+
+5. Open a Pull Request
+
+---
+
+# 🙌 Acknowledgments
+
+We sincerely thank our mentor and faculty members for their valuable guidance and continuous support throughout this project.
+
+We also acknowledge the open-source community and the technologies that make this project possible:
+
+- React.js
+- Tailwind CSS
+- FastAPI
+- MongoDB Atlas
+- Pandas
+- NumPy
+- NLTK
+- spaCy
+- Git & GitHub
+
+Their excellent documentation and open-source contributions have been invaluable during the development of this project.
+
+---
