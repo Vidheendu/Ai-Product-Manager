@@ -90,11 +90,11 @@ Displays:
                                ▼
                   FastAPI Backend (Python)
                                │
-        ┌──────────────┬──────────────┬──────────────┐
-        │              │              │
- Authentication   Project Mgmt     File Upload
-        │              │              │
-        └──────────────┴──────────────┘
+        ┌──────────────┬──────────────┬──────────
+        │              │              │         |
+ Authentication   Project Mgmt     File Upload  |
+        │              │              │         |
+        _________________________________________        
                        │
                        ▼
                Data Validation Layer
@@ -397,10 +397,7 @@ git push origin feature/feature-name
 ---
 
 # 🙌 Acknowledgments
-
-We sincerely thank our mentor and faculty members for their valuable guidance and continuous support throughout this project.
-
-We also acknowledge the open-source community and the technologies that make this project possible:
+The technologies that make this project possible:
 
 - React.js
 - Tailwind CSS
@@ -411,7 +408,5 @@ We also acknowledge the open-source community and the technologies that make thi
 - NLTK
 - spaCy
 - Git & GitHub
-
-Their excellent documentation and open-source contributions have been invaluable during the development of this project.
 
 ---
