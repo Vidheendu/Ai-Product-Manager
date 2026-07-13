@@ -410,3 +410,37 @@ The technologies that make this project possible:
 - Git & GitHub
 
 ---
+
+# User Stories
+
+1. Secure Workspace Access
+As a Product Manager, I want to securely log in and access my team's workspace, so that my product data stays private and organized by project.
+Acceptance Criteria: Only authenticated users can access their own workspace data.
+
+2. Multi-Source Data Ingestion
+As a Product Manager, I want to import customer feedback, support tickets, and feature requests from multiple sources into one system, so that I don't have to manually consolidate data from scattered channels.
+Acceptance Criteria: System successfully imports and stores data from at least two different source formats.
+
+3. Automated Feedback Classification
+As a Product Manager, I want incoming feedback and tickets to be automatically categorized by theme and sentiment, so that I can quickly spot recurring pain points without reading every entry.
+Acceptance Criteria: Every imported entry is auto-tagged with a theme and sentiment label.
+
+4. Feature Request Aggregation
+As a Product Manager, I want similar feature requests from different sources grouped together, so that I can see true demand for a feature instead of scattered duplicate requests.
+Acceptance Criteria: Similar requests are grouped into a single cluster with a request count.
+
+5. AI-Driven Prioritization
+As a Product Manager, I want the system to score and rank features by business impact and user demand, so that I can make faster, data-backed prioritization decisions.
+Acceptance Criteria: Each feature is assigned a priority score and displayed in ranked order.
+
+6. Automated PRD & User Story Generation
+As a Product Manager, I want the assistant to draft PRDs and user stories from prioritized feature data, so that I can accelerate documentation and reduce manual writing effort.
+Acceptance Criteria: A draft PRD with user stories is generated for any selected feature.
+
+7. Roadmap Visualization
+As a Product Manager, I want prioritized features displayed on a visual roadmap timeline, so that I can communicate plans clearly to stakeholders and engineering teams.
+Acceptance Criteria: Prioritized features appear correctly placed on a timeline view.
+
+8. Conversational Insights Assistant
+As a Product Manager, I want to ask the copilot natural-language questions about my product data, so that I can get instant answers without manually digging through dashboards or reports.
+Acceptance Criteria: Assistant returns a relevant answer for a natural-language query.
