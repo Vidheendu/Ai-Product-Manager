@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+pandas
+numpy
+scikit-learn
+sentence-transformers
+keybert
+nltk
+python-multipart
+matplotlib
+seaborn
+openpyxl
+wordcloud
+joblib

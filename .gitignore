@@ -1,0 +1,20 @@
+# Python virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# Next.js
+frontend/node_modules/
+frontend/.next/
+
+# Backend uploads/output
+backend/uploads/
+backend/output/
+
+# VS Code (optional)
+.vscode/
